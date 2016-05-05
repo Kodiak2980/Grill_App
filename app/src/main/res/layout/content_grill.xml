@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pc.myapplication.Grill"
+    tools:showIn="@layout/activity_grill">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grilled Food"
+        android:id="@+id/friedFood" />
+
+    <ImageView
+        android:src= "@drawable/grill155logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/grillLogo"
+        android:layout_below="@id/friedFood"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/friedFood"
+        android:layout_marginTop="12dp"
+        android:id="@+id/foodGroup">
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chicken Tenders(3)"
+            android:id="@+id/chickenTenders"
+            android:layout_marginTop="34dp"
+            android:checked="false"
+            android:layout_below="@+id/friedFood"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turkey Burger"
+            android:id="@+id/turkeyBurger"
+            android:checked="false"
+            android:layout_below="@+id/chickenTenders"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Garden Burger"
+            android:id="@+id/gardenBurger"
+            android:checked="false"
+            android:layout_below="@+id/turkeyBurger"
+            android:layout_alignRight="@+id/grilledCheese"
+            android:layout_alignEnd="@+id/grilledCheese"
+            android:layout_marginTop="14dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grilled Cheese"
+            android:id="@+id/grilledCheese"
+            android:checked="false"
+            android:layout_below="@+id/gardenBurger"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/4 Pound Burger"
+            android:id="@+id/burger"
+            android:checked="false"
+            android:layout_below="@+id/grilledCheese"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/4 Pound Cheese Burger"
+            android:id="@+id/cheeseBurger"
+            android:checked="false"
+            android:layout_below="@+id/burger"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="14dp" />
+
+
+        <ToggleButton
+
+            android:textOn="Fries"
+            android:textOff="No Fries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fries"
+            android:id="@+id/fries"
+            android:layout_marginTop="35dp"
+            android:checked="false"
+            android:layout_below="@+id/cheeseBurger"
+            android:layout_alignLeft="@+id/gardenBurger"
+            android:layout_alignStart="@+id/gardenBurger" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="*Fries are free with any meal"
+            android:id="@+id/fryInfo"
+            />
+
+        <Button
+            android:onClick="checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:id="@+id/checkout"
+            android:layout_alignRight="@+id/fries"
+            android:layout_gravity="right" />
+
+
+    </RadioGroup>
+
+</RelativeLayout>
